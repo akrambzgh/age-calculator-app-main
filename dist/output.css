@@ -16,7 +16,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: #e5e7eb;
+  border-color: currentColor;
   /* 2 */
 }
 
@@ -516,16 +516,171 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.left-1\/2 {
+  left: 50%;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
+.ml-28 {
+  margin-left: 7rem;
+}
+
+.ml-64 {
+  margin-left: 16rem;
+}
+
+.ml-72 {
+  margin-left: 18rem;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-4 {
+  height: 1rem;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-1\/5 {
+  width: 20%;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-1\/4 {
+  width: 25%;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-r {
+  border-right-width: 1px;
+}
+
+.border-r-4 {
+  border-right-width: 4px;
+}
+
+.border-light-gray {
+  --tw-border-opacity: 1;
+  border-color: hsl(0 0% 86% / var(--tw-border-opacity));
+}
+
+.border-smoky-gray {
+  --tw-border-opacity: 1;
+  border-color: hsl(0 1% 44% / var(--tw-border-opacity));
+}
+
+.bg-light-gray {
+  --tw-bg-opacity: 1;
+  background-color: hsl(0 0% 86% / var(--tw-bg-opacity));
+}
+
+.bg-purple {
+  --tw-bg-opacity: 1;
+  background-color: hsl(259 100% 65% / var(--tw-bg-opacity));
+}
+
 .p-4 {
   padding: 1rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.p-10 {
+  padding: 2.5rem;
 }
 
-.text-pink-800 {
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-light-gray {
   --tw-text-opacity: 1;
-  color: rgb(157 23 77 / var(--tw-text-opacity));
+  color: hsl(0 0% 86% / var(--tw-text-opacity));
+}
+
+.text-smoky-gray {
+  --tw-text-opacity: 1;
+  color: hsl(0 1% 44% / var(--tw-text-opacity));
+}
+
+.before\:absolute::before {
+  content: var(--tw-content);
+  position: absolute;
 }
