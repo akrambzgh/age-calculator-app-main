@@ -28,8 +28,8 @@
     </style>
   </head>
   <body class="bg-light-gray flex justify-center items-center h-screen">
-    <main class="main w-1/2">
-      <div class="inputs flex justify-between items-center p-10">
+    <main class="main w-1/2 relative pl-4 pr-4">
+      <div class="inputs flex justify-between items-center p-10 mb-6">
         <div class="day">
           <label for="name-input" class="uppercase text-smoky-gray text-base mb-2 block">day</label>
           <input type="number" id="name-input" placeholder="DD" class="border-2 border-light-gray p-4">
@@ -43,11 +43,11 @@
           <input type="number" placeholder="YYYY" id="year-input" class="border-2 border-light-gray p-4">
         </div>
       </div>
-      <div class="line bg-purple w-10 border-r-4"><img src="../../assets/images/icon-arrow.svg" alt=""></div>
-      <div class="age-main">
-        <div class="year-sec ml-72 text-7xl relative"><span class="year-num line-num"></span>years</div>
-        <div class="month-sec ml-72 text-7xl relative"><span class="month-num line-num"></span>months</div>
-        <div class="day-sec ml-72 text-7xl relative"><span class="day-num line-num"></span>days</div>
+      <div class="line bg-purple w-24 rounded-full absolute right-4 h-24 flex select-none"><img src="../../assets/images/icon-arrow.svg" alt=""></div>
+      <div class="age-main mt-36 relative">
+        <div class="year-sec ml-72 text-8xl relative mb-10"><span class="year-num line-num">38</span>years</div>
+        <div class="month-sec ml-72 text-8xl relative mb-10"><span class="month-num line-num">5</span>months</div>
+        <div class="day-sec ml-72 text-8xl relative mb-10"><span class="day-num line-num">23</span>days</div>
       </div>
     </main>
   <!-- 

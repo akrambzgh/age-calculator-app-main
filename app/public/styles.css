@@ -1,3 +1,11 @@
+:root {
+  --off-white: hsl(0, 0%, 94%);
+  --light-gray: hsl(0, 0%, 86%);
+  --smoky-gray: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+}
 html {
   height: 100%;
   line-height: 1.6;
@@ -20,7 +28,8 @@ body {
 main {
   background-color: white;
   border-radius: 10px;
-  border-bottom-right-radius: 50%;
+  border-bottom-right-radius: 200px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 input {
@@ -36,7 +45,7 @@ input:focus {
   position: absolute;
   left: -40%;
   bottom: 0;
-  background-color: purple;
+  background-color: var(--purple);
   width: 15%;
   height: 15px;
 }
@@ -45,7 +54,18 @@ input:focus {
   position: absolute;
   left: -24%;
   bottom: 0;
-  background-color: purple;
+  background-color: var(--purple);
   width: 15%;
   height: 15px;
+}
+
+.line::before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--light-gray);
+  width: 848px;
+  height: 2px;
 }
