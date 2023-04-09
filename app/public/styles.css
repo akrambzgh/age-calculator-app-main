@@ -36,10 +36,14 @@ main {
     width: 792px;
   }
 }
-@media (max-width: 991px) and (min-width: 400px) {
+@media (max-width: 991px) and (min-width: 700px) {
   main {
     width: 96%;
-    transform: translateX(2%);
+  }
+}
+@media (max-width: 699px) and (min-width: 400px) {
+  main {
+    width: 100%;
   }
 }
 
@@ -85,6 +89,14 @@ input::-webkit-inner-spin-button {
     width: 23%;
   }
 }
+@media (max-width: 699px) and (min-width: 375px) {
+  .year-sec::before,
+  .month-sec::before,
+  .day-sec::before {
+    left: -43%;
+    width: 29%;
+  }
+}
 .year-sec::after,
 .month-sec::after,
 .day-sec::after {
@@ -104,7 +116,18 @@ input::-webkit-inner-spin-button {
     width: 23%;
   }
 }
+@media (max-width: 699px) and (min-width: 375px) {
+  .year-sec::after,
+  .month-sec::after,
+  .day-sec::after {
+    left: -75%;
+    width: 29%;
+  }
+}
 
+.line {
+  cursor: pointer;
+}
 .line::before {
   content: "";
   position: absolute;
@@ -117,8 +140,8 @@ input::-webkit-inner-spin-button {
 }
 
 .line-num {
-  letter-spacing: 38px;
-  left: 50px;
+  letter-spacing: 48px;
+  left: 40px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -127,6 +150,12 @@ input::-webkit-inner-spin-button {
 @media (min-width: 992px) and (max-width: 1199px) {
   .line-num {
     letter-spacing: 56px;
+  }
+}
+@media (max-width: 699px) and (min-width: 375px) {
+  .line-num {
+    letter-spacing: 60px;
+    left: 30px;
   }
 }
 
@@ -140,6 +169,14 @@ input::-webkit-inner-spin-button {
   top: 16rem;
 }
 
+@media (max-width: 699px) and (min-width: 375px) {
+  .inputs {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    padding-top: 15px;
+  }
+}
 @media (min-width: 992px) and (max-width: 1199px) {
   .inputs #day-input {
     width: 100%;

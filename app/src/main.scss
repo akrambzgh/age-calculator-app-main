@@ -6,7 +6,7 @@ $offBlack: hsl(0, 0%, 8%);
 $purple: hsl(259, 100%, 65%);
 $lightRed: hsl(0, 100%, 67%);
 
-@mixin elements($color, $w, $h) {
+@mixin before-after-elements($color, $w, $h) {
   content: "";
   position: absolute;
   background-color: $color;
@@ -47,9 +47,11 @@ main {
   @media (min-width: 992px) and (max-width: 1199px) {
     width: 792px;
   }
-  @media (max-width: 991px) and (min-width: 400px) {
+  @media (max-width: 991px) and (min-width: 700px) {
     width: 96%;
-    transform: translateX(2%);
+  }
+  @media (max-width: 699px) and (min-width: 400px) {
+    width: 100%;
   }
 }
 
@@ -72,21 +74,29 @@ input {
 .month-sec,
 .day-sec {
   &::before {
-    @include elements($purple, 15%, 15px);
+    @include before-after-elements($purple, 15%, 15px);
     bottom: 0;
     left: -40%;
     @media (min-width: 992px) and (max-width: 1199px) {
       left: -30%;
       width: 23%;
     }
+    @media (max-width: 699px) and (min-width: 375px) {
+      left: -43%;
+      width: 29%;
+    }
   }
   &::after {
-    @include elements($purple, 15%, 15px);
+    @include before-after-elements($purple, 15%, 15px);
     bottom: 0;
     left: -24%;
     @media (min-width: 992px) and (max-width: 1199px) {
       left: -56%;
       width: 23%;
+    }
+    @media (max-width: 699px) and (min-width: 375px) {
+      left: -75%;
+      width: 29%;
     }
   }
   -webkit-user-select: none;
@@ -95,8 +105,9 @@ input {
   user-select: none;
 }
 .line {
+  cursor: pointer;
   &::before {
-    @include elements($lightGray, 848px, 2px);
+    @include before-after-elements($lightGray, 848px, 2px);
     right: 100%;
     top: 50%;
     transform: translateY(-50%);
@@ -104,14 +115,18 @@ input {
 }
 
 .line-num {
-  letter-spacing: 38px;
-  left: 50px;
+  letter-spacing: 48px;
+  left: 40px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   @media (min-width: 992px) and (max-width: 1199px) {
     letter-spacing: 56px;
+  }
+  @media (max-width: 699px) and (min-width: 375px) {
+    letter-spacing: 60px;
+    left: 30px;
   }
 }
 .line-num {
@@ -127,6 +142,12 @@ input {
 }
 
 .inputs {
+  @media (max-width: 699px) and (min-width: 375px) {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    padding-top: 15px;
+  }
   #day-input {
     @media (min-width: 992px) and (max-width: 1199px) {
       width: 100%;
