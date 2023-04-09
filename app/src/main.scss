@@ -1,0 +1,145 @@
+$font-family: "Poppins", sans-serif;
+$white: hsl(0, 0%, 100%);
+$lightGray: hsl(0, 0%, 86%);
+$smokyGray: hsl(0, 1%, 44%);
+$offBlack: hsl(0, 0%, 8%);
+$purple: hsl(259, 100%, 65%);
+$lightRed: hsl(0, 100%, 67%);
+
+@mixin elements($color, $w, $h) {
+  content: "";
+  position: absolute;
+  background-color: $color;
+  width: $w;
+  height: $h;
+}
+
+html {
+  height: 100%;
+  line-height: 1.6;
+}
+body {
+  font-family: $font-family;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  &::before {
+    box-sizing: border-box;
+  }
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+main {
+  width: 50%;
+  background-color: $white;
+  border-radius: 10px;
+  border-bottom-right-radius: 200px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+  @media (min-width: 1200px) {
+    width: 1000px;
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    width: 792px;
+  }
+  @media (max-width: 991px) and (min-width: 400px) {
+    width: 96%;
+    transform: translateX(2%);
+  }
+}
+
+input {
+  outline: 0;
+  &:focus {
+    outline: 0;
+  }
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.year-sec,
+.month-sec,
+.day-sec {
+  &::before {
+    @include elements($purple, 15%, 15px);
+    bottom: 0;
+    left: -40%;
+    @media (min-width: 992px) and (max-width: 1199px) {
+      left: -30%;
+      width: 23%;
+    }
+  }
+  &::after {
+    @include elements($purple, 15%, 15px);
+    bottom: 0;
+    left: -24%;
+    @media (min-width: 992px) and (max-width: 1199px) {
+      left: -56%;
+      width: 23%;
+    }
+  }
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.line {
+  &::before {
+    @include elements($lightGray, 848px, 2px);
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.line-num {
+  letter-spacing: 38px;
+  left: 50px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  @media (min-width: 992px) and (max-width: 1199px) {
+    letter-spacing: 56px;
+  }
+}
+.line-num {
+  &.year {
+    top: -1rem;
+  }
+  &.month {
+    top: 7.5rem;
+  }
+  &.day {
+    top: 16rem;
+  }
+}
+
+.inputs {
+  #day-input {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      width: 100%;
+    }
+  }
+  #month-input {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      width: 100%;
+    }
+  }
+  #year-input {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      width: 100%;
+    }
+  }
+}
