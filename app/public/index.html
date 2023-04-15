@@ -30,20 +30,21 @@
     <main class="main relative pl-4 pr-4">
       <div class="inputs flex justify-between items-center p-10 mb-6">
         <div class="day">
-          <label for="name-input" class="uppercase text-smoky-gray text-base mb-2 block">day</label>
-          <input type="text" id="day-input" maxlength="2" placeholder="DD" class="border-2 border-light-gray p-4">
+          <label for="day-input" class="uppercase text-smoky-gray text-base mb-2 block">day</label>
+          <input type="text" id="day-input" maxlength="2" placeholder="DD" class="border-2 border-light-gray p-4 block">
         </div>
         <div class="month">
           <label for="month-input" class="uppercase text-smoky-gray text-base mb-2 block">month</label>
-          <input type="text" id="month-input" maxlength="2" placeholder="MM" class="border-2 border-light-gray p-4">
+          <input type="text" id="month-input" maxlength="2" placeholder="MM" class="border-2 border-light-gray p-4 block">
         </div>
         <div class="year">
           <label for="year-input" class="uppercase text-smoky-gray text-base mb-2 block">year</label>
-          <input type="text" id="year-input" maxlength="4" placeholder="YYYY" class="border-2 border-light-gray p-4">
+          <input type="text" id="year-input" maxlength="4" placeholder="YYYY" class="border-2 border-light-gray p-4 block">
         </div>
       </div>
+      <span class="error block text-light-red pl-10 h-10 text-lg uppercase"></span>
       <div class="line bg-purple w-24 rounded-full absolute right-4 h-24 flex select-none cursor-pointer"><img src="../../assets/images/icon-arrow.svg" alt=""></div>
-      <div class="age-main mt-36 relative">
+      <div class="age-main mt-24 relative">
         <div class="year-sec ml-72 text-8xl relative mb-10">years</div>
         <div class="month-sec ml-72 text-8xl relative mb-10">months</div>
         <div class="day-sec ml-72 text-8xl relative mb-10">days</div>
