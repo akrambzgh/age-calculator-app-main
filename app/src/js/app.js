@@ -55,6 +55,7 @@ class EnterDate {
     day = this.dayInput.value;
     month = this.monthInput.value;
     year = this.yearInput.value;
+
     const birthday = new Date(`${month} ${day}, ${year}`);
 
     let yearDiff = todayDate.getFullYear() - birthday.getFullYear();
@@ -78,6 +79,9 @@ class EnterDate {
     if (monthDiff < 10) {
       monthDiff = `0${monthDiff}`;
     }
+    if (yearDiff < 10) {
+      yearDiff = `0${yearDiff}`;
+    }
     if (isNaN(dayDiff)) {
       dayDiff = null;
     }
@@ -91,6 +95,14 @@ class EnterDate {
     this.dayNum.textContent = dayDiff;
     this.monthNum.textContent = monthDiff;
     this.yearNum.textContent = yearDiff;
+
+    if (yearDiff < 0) {
+      this.dayNum.textContent = "";
+      this.monthNum.textContent = "";
+      monthDiff = null;
+      dayDiff = null;
+      this.yearNum.textContent = "";
+    }
   }
 
   checkNumber() {

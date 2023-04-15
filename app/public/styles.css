@@ -23,7 +23,6 @@ main {
   width: 50%;
   background-color: hsl(0, 0%, 100%);
   border-radius: 10px;
-  border-bottom-right-radius: 200px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 @media (min-width: 1200px) {
@@ -65,64 +64,11 @@ input::-webkit-inner-spin-button {
 .year-sec,
 .month-sec,
 .day-sec {
+  direction: rtl;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-.year-sec::before,
-.month-sec::before,
-.day-sec::before {
-  content: "";
-  position: absolute;
-  background-color: hsl(259, 100%, 65%);
-  width: 15%;
-  height: 15px;
-  bottom: 0;
-  left: -40%;
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  .year-sec::before,
-  .month-sec::before,
-  .day-sec::before {
-    left: -30%;
-    width: 23%;
-  }
-}
-@media (max-width: 699px) and (min-width: 375px) {
-  .year-sec::before,
-  .month-sec::before,
-  .day-sec::before {
-    left: -43%;
-    width: 29%;
-  }
-}
-.year-sec::after,
-.month-sec::after,
-.day-sec::after {
-  content: "";
-  position: absolute;
-  background-color: hsl(259, 100%, 65%);
-  width: 15%;
-  height: 15px;
-  bottom: 0;
-  left: -24%;
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  .year-sec::after,
-  .month-sec::after,
-  .day-sec::after {
-    left: -56%;
-    width: 23%;
-  }
-}
-@media (max-width: 699px) and (min-width: 375px) {
-  .year-sec::after,
-  .month-sec::after,
-  .day-sec::after {
-    left: -75%;
-    width: 29%;
-  }
 }
 
 .line {
@@ -141,7 +87,10 @@ input::-webkit-inner-spin-button {
 
 .line-num {
   letter-spacing: 48px;
+  border: 10px solid hsl(259, 100%, 65%);
+  text-align: center;
   left: 40px;
+  padding-left: 45px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
